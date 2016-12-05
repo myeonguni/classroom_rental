@@ -7,15 +7,6 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <div class="container">
-	<!-- 강의실 신청서 제출에 따른 메시지 -->
-	<div style="color:blue; margin-bottom:5px;" class="text-center">
-		<!-- 성공 메시지가 존재할 경우 -->
-		${success}
-	</div>
-	<div style="color:red; margin-bottom:5px;" class="text-center">
-		<!-- 에러 메시지가 존재할 경우 -->
-		${error}
-	</div> 
 	<!-- 강의실 예약 신청서 양식 -->
 	<form id="rentalForm" action="/classroom_rental/classroomRentalFormReport.do" method="POST">
 		<!-- 신청자 인적 정보 -->

@@ -42,7 +42,15 @@ public class ClassroomRentalFormAction implements CommandAction {
 		/* 강의실 예약 현황 담기 */
 		for (int i = 0; i < reservationTableList.size(); i++) {
 			String[] tmp_time = reservationTableList.get(i).getRental_chk_time().split(",");
-			String tmp_state = (reservationTableList.get(i).getRental_state().equals("true")) ? "[2]" : "[3]";
+			String tmp_state = "";
+			if (reservationTableList.get(i).getRental_state().equals("true")) {
+				tmp_state = "[2]";
+			} else if (reservationTableList.get(i).getRental_state().equals("false")) {
+				tmp_state = "[3]";
+			} else if (reservationTableList.get(i).getRental_state().equals("reject")) {
+				tmp_state = "[4]";
+			} else { }
+			
 			for (int j = 0; j < tmp_time.length; j++) {
 				timeTables[(Integer.parseInt(reservationTableList.get(i).getRental_date()) - 1)][(Integer
 						.parseInt(tmp_time[j]) - 1)] = tmp_state + reservationTableList.get(i).getUser_name();
@@ -77,6 +85,9 @@ public class ClassroomRentalFormAction implements CommandAction {
 					} else if (timeTablesTemp.substring(0, 3).equals("[3]")) {
 						timeTablesTemp = (timeTablesTemp.length() > 8) ? "[대기]" + timeTablesTemp.substring(3, 8) + ".." : "[대기]" + timeTablesTemp.substring(3, timeTablesTemp.length());
 						timeTablesResult += "<td class='text-center' nowrap style='padding:0px; overflow: hidden; font-size:12px; background-color:#f2dede;'>" + timeTablesTemp + "</td>";
+					} else if (timeTablesTemp.substring(0, 3).equals("[4]")) {
+						timeTablesResult += "<td class='text-center' style='padding:0px;'><input type='checkbox' name='rental_chk_time' value='"
+								+ (count) + "'></td>";
 					} else {
 						
 					}

@@ -14,6 +14,10 @@
 	<link rel="stylesheet" href="/classroom_rental/resources/lib/default/main-style.css">
 </head>
 <body>
+	<!-- 로그인 상태에서 접속할 경우(세션체크) -->
+	<%if(session.getAttribute("name")!=null){ %>
+	<script>alert("먼저 로그아웃 해주세요."); location.href="/classroom_rental/";</script>
+	<%}%>
 	<div id="wrap">
 		<div class="container">
 			<h1 class="page-header">

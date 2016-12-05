@@ -21,6 +21,8 @@ public class ClassroomRentalFormReportAction implements CommandAction {
 		String tmp_rental_name = request.getParameter("rental_name");
 		String tmp_rental_alldate = request.getParameter("rental_alldate");
 		String tmp_rental_reason = request.getParameter("rental_reason");
+		// 줄바꿈 치환
+		tmp_rental_reason = tmp_rental_reason.replace("\r\n","<br>");
 		String tmp_rental_agree = request.getParameter("rental_chk_agree");
 		
 		// 예약시간을 7주로 나누어 몫과 나머지를 기준으로 월요일~일요일까지 예약시간 넣기(','로 나눔)

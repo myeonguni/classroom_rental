@@ -26,15 +26,37 @@
 				<div class="menu">
 					<ul class="nav nav-pills">
 						<li><a href="/classroom_rental/">홈</a></li>
+						<%
+							/* 세션이 존재할 경우 */
+							if (session.getAttribute("isAdmin") != null) { 
+								/* 관리자일 경우 */
+								if (session.getAttribute("isAdmin").equals("1")) {
+						%>
+						<li><a href="/classroom_rental/adminRentalMng.do">강의실 대여 관리</a></li>
 						<li class="active"><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
+						<li><a href="/classroom_rental/noticeMng.do">공지사항 등록</a></li>
 						<li><a href="/classroom_rental/qaBoard.do">게시판</a></li>
+						<li><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
-						<%-- <%if(session.getAttribute("name")!=null){ %>
+						<%
+								/* 일반 사용자일 경우 */
+								} else {
+						%>
+						<li class="active"><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
+						<li><a href="/classroom_rental/qaBoard.do">게시판</a></li>
+						<li><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
+						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
-						<%}else{%>
-						<script>alert("회원만 가능합니다. 로그인 후 이용해주세요."); location.href="/classroom_rental/views/login.jsp";</script>
-						<%}%> --%>
+						<%
+							}
+							/* 세션이 없을 경우 */
+							} else {
+						%>
+						<script>alert("회원만 가능합니다. 로그인 후 이용해주세요."); location.href="/classroom_rental/views/main/login.jsp";</script>
+						<%
+							}
+						%>
 					</ul>
 				</div>
 			</div>
@@ -195,7 +217,7 @@
 	function rentalModalSuccess() {
 		$('#rentalModal').modal('toggle');
 		//추가된 강의실 예약신청에 따른 페이지 리로드
-		location.href = 'http://110.10.237.12:8080/classroom_rental/classroomRentalList.do';
+		location.href = 'http://localhost:8080/classroom_rental/classroomRentalList.do';
 	}
 
 	/* 예약하기 모달 오픈 */

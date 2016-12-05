@@ -26,12 +26,15 @@
 						<li class="active"><a href="/classroom_rental/">홈</a></li>
 						<%
 							/* 세션이 존재할 경우 */
-							if (session.getAttribute("id") != null) { 
+							if (session.getAttribute("isAdmin") != null) { 
 								/* 관리자일 경우 */
-								if (session.getAttribute("id").equals("111111111")) {
+								if (session.getAttribute("isAdmin").equals("1")) {
 						%>
-						<li><a href="/classroom_rental/schedulMng.do">강의실 대여 현황</a></li>
+						<li><a href="/classroom_rental/adminRentalMng.do">강의실 대여 관리</a></li>
+						<li><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
 						<li><a href="/classroom_rental/noticeMng.do">공지사항 등록</a></li>
+						<li><a href="/classroom_rental/qaBoard.do">게시판</a></li>
+						<li><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
 						<%
@@ -40,6 +43,7 @@
 						%>
 						<li><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
 						<li><a href="/classroom_rental/qaBoard.do">게시판</a></li>
+						<li><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
 						<%

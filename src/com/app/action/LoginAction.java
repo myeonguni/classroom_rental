@@ -29,6 +29,7 @@ public class LoginAction implements CommandAction {
 			request.getSession().setAttribute("name", sessionValue[1]);
 			request.getSession().setAttribute("department", sessionValue[2]);
 			request.getSession().setAttribute("tel", sessionValue[3]);
+			request.getSession().setAttribute("isAdmin", sessionValue[4]);
 			return "/";
 		}
 	}
