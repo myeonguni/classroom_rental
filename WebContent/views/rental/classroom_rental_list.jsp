@@ -26,7 +26,7 @@
 				<div class="menu">
 					<ul class="nav nav-pills">
 						<li><a href="/classroom_rental/">홈</a></li>
-						<li class="active"><a href="/classroom_rental/classroomRental.do">강의실 대여</a></li>
+						<li class="active"><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
 						<li><a href="/classroom_rental/qaBoard.do">게시판</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
@@ -194,8 +194,8 @@
 	/* 예약하기 신청 완료 */
 	function rentalModalSuccess() {
 		$('#rentalModal').modal('toggle');
-		//추가된 강의실 예약신청에 따른 페이지
-		location.href = 'http://localhost:8080/classroom_rental/classroomRentalList.do';
+		//추가된 강의실 예약신청에 따른 페이지 리로드
+		location.href = 'http://110.10.237.12:8080/classroom_rental/classroomRentalList.do';
 	}
 
 	/* 예약하기 모달 오픈 */

@@ -63,17 +63,17 @@
 					<div class="col-md-4">
 						<h2>강의실 대여</h2>
 						<p class="text-justify">강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청요</p>
-						<p><a class="btn btn-warning" href="/classroom_rental/classroomRentalList.do" role="button">강의실 대여하러 가기 »</a></p>
+						<p><a class="btn" style="background-color:#fcf8e3;" href="/classroom_rental/classroomRentalList.do" role="button">강의실 대여하러 가기 »</a></p>
 					</div>
 					<div class="col-md-4">
 						<h2>게시판</h2>
 						<p class="text-justify">강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청요</p>
-						<p><a class="btn btn-warning" href="#" role="button">게시판 가기 »</a></p>
+						<p><a class="btn" style="background-color:#fcf8e3;" href="#" role="button">게시판 가기 »</a></p>
 					</div>
 					<div class="col-md-4">
 						<h2>사이트 문의</h2>
 						<p class="text-justify">강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청요</p>
-						<p><a class="btn btn-warning" href="#" role="button">문의하러 가기 »</a></p>
+						<p><a class="btn" style="background-color:#fcf8e3;" href="#" role="button">문의하러 가기 »</a></p>
 					</div>
 				</div>
 				<!-- 구분선 삽입 -->
@@ -99,13 +99,13 @@
 												<img src="/classroom_rental/resources/images/room3.jpg">
 											</div>
 											<div class="item" data-slide-number="4">
-												<img src="/classroom_rental/resources/images/room1.jpg">
+												<img src="/classroom_rental/resources/images/room4.jpg">
 											</div>
 											<div class="item" data-slide-number="5">
-												<img src="/classroom_rental/resources/images/room2.jpg">
+												<img src="/classroom_rental/resources/images/room5.jpg">
 											</div>
 											<div class="item" data-slide-number="6">
-												<img src="/classroom_rental/resources/images/room3.jpg">
+												<img src="/classroom_rental/resources/images/room6.jpg">
 											</div>
 										</div>
 										<!-- Carousel nav -->
@@ -189,13 +189,13 @@
 									src="/classroom_rental/resources/images/room3.jpg"></a></li>
 							<li class="col-sm-2"><a class="thumbnail"
 								id="carousel-selector-3"><img
-									src="/classroom_rental/resources/images/room1.jpg"></a></li>
+									src="/classroom_rental/resources/images/room4.jpg"></a></li>
 							<li class="col-sm-2"><a class="thumbnail"
 								id="carousel-selector-4"><img
-									src="/classroom_rental/resources/images/room2.jpg"></a></li>
+									src="/classroom_rental/resources/images/room5.jpg"></a></li>
 							<li class="col-sm-2"><a class="thumbnail"
 								id="carousel-selector-5"><img
-									src="/classroom_rental/resources/images/room3.jpg"></a></li>
+									src="/classroom_rental/resources/images/room6.jpg"></a></li>
 						</ul>
 					</div>
 				</div>

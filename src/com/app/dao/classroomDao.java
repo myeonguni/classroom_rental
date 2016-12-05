@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.app.beans.classroom;
+import com.app.beans.reservation;
 import com.app.beans.timetable;
 
 public class classroomDao extends CommonDao {
@@ -42,7 +43,7 @@ public class classroomDao extends CommonDao {
 	    return result;
 	}
 
-	/* 시간표조회 */
+	/* 고정 시간표 조회 */
 	public ArrayList<timetable> getTimeTableList(String classroom) throws SQLException {
 		ResultSet rs = null;
 		ArrayList<timetable> result = new ArrayList<timetable>();
@@ -59,5 +60,45 @@ public class classroomDao extends CommonDao {
 	    closeConnection();
 	    return result;
 	}
+
+	/* 강의실 예약 현황 조회 */
+	public ArrayList<reservation> getReservationTableList(String toWeek, String classroom) throws SQLException {
+		ResultSet rs = null;
+		ArrayList<reservation> result = new ArrayList<reservation>();
+	    String sql = "SELECT * FROM RESERVATION WHERE RES_CR = '"+classroom+"' AND RES_ALLDATE = '"+toWeek+"'";
+        rs = openConnection().executeQuery(sql);
+        while(rs.next()){
+        	reservation rr = new reservation();
+			rr.setUser_name(rs.getString("RES_USERNAME"));
+			rr.setUser_id(rs.getString("RES_USERID"));
+			rr.setUser_department(rs.getString("RES_USERDEPARTMENT"));
+			rr.setUser_tel(rs.getString("RES_USERTEL"));
+			rr.setRental_name(rs.getString("RES_CR"));
+			rr.setRental_state(rs.getString("RES_IS"));
+			rr.setRental_alldate(rs.getString("RES_ALLDATE"));
+			rr.setRental_date(rs.getString("RES_DATE"));
+			rr.setRental_chk_time(rs.getString("RES_TIME"));
+			rr.setRental_reason(rs.getString("RES_AIM"));
+			rr.setRental_chk_agree(rs.getString("RES_AGREE"));
+        	result.add(rr);
+        }
+	    closeConnection();
+	    return result;
+	}
 	
+	/* 강의실 사용 신청서 추가 */
+	public boolean getAddReservation(reservation report) throws SQLException {
+		ResultSet rs = null;
+	    boolean result = false;
+		String sql = "INSERT INTO RESERVATION VALUES(RES_ID_SEQ.NEXTVAL,'"+"false'"+",'"+report.getRental_name()+"','"+report.getRental_alldate()+"','"+report.getRental_date()+"','"+report.getRental_chk_time()+"','"+report.getRental_reason()+"','"+report.getUser_name()+"','"+report.getUser_id()+"','"+report.getUser_department()+"','"+report.getUser_tel()+"','"+report.getRental_chk_agree()+"')";
+	    try {
+			rs = openConnection().executeQuery(sql);
+			result = rs.next(); // 신청서 추가시 ture
+		} catch (SQLException e) {
+			result = false; // 신청서 추가 실패시 false
+		} finally {
+		    closeConnection();
+		}
+	    return result;
+	}
 }
