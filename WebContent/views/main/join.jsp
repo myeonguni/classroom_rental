@@ -28,7 +28,7 @@
 				<div class="menu">
 					<ul class="nav nav-pills">
 						<li><a href="/classroom_rental/">홈</a></li>
-						<li><a href="/classroom_rental/views/board/board_list.jsp">게시판</a></li>
+						<li><a href="/classroom_rental/boardList.do">게시판</a></li>
 						<li><a href="/classroom_rental/views/main/login.jsp">로그인</a></li>
 						<li class="active"><a href="/classroom_rental/views/main/join.jsp">회원가입</a></li>
 					</ul>

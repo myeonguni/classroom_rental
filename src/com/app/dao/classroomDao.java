@@ -31,7 +31,7 @@ public class classroomDao extends CommonDao {
 	public ArrayList<classroom> getClassRoomList(String building) throws SQLException {
 		ResultSet rs = null;
 		ArrayList<classroom> result = new ArrayList<classroom>();
-	    String sql = "SELECT * FROM CLASSROOM WHERE CR_BUILDING = '"+building+"'";
+	    String sql = "SELECT CLASSROOM.CR_ID, CLASSROOM.CR_NAME FROM CLASSROOM INNER JOIN BUILDING ON CLASSROOM.CR_BUILDING = BUILDING.BD_ID WHERE CLASSROOM.CR_BUILDING ='"+building+"'";
         rs = openConnection().executeQuery(sql);
         while(rs.next()){
         	classroom cr = new classroom();

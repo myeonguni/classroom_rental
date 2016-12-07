@@ -35,7 +35,7 @@
 						<li><a href="/classroom_rental/adminRentalMng.do">강의실 대여 관리</a></li>
 						<li class="active"><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
 						<li><a href="/classroom_rental/views/admin/notice_mng.jsp">공지사항 등록</a></li>
-						<li><a href="/classroom_rental/views/board/board_list.jsp">게시판</a></li>
+						<li><a href="/classroom_rental/boardList.do">게시판</a></li>
 						<li><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
@@ -44,7 +44,7 @@
 								} else {
 						%>
 						<li class="active"><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
-						<li><a href="/classroom_rental/views/board/board_list.jsp">게시판</a></li>
+						<li><a href="/classroom_rental/boardList.do">게시판</a></li>
 						<li><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
@@ -217,7 +217,7 @@
 	function rentalModalSuccess() {
 		$('#rentalModal').modal('toggle');
 		//추가된 강의실 예약신청에 따른 페이지 리로드
-		location.href = 'http://localhost:8080/classroom_rental/classroomRentalList.do';
+		location.href = '/classroom_rental/classroomRentalList.do';
 	}
 
 	/* 예약하기 모달 오픈 */

@@ -33,7 +33,7 @@
 						<li><a href="/classroom_rental/adminRentalMng.do">강의실 대여 관리</a></li>
 						<li><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
 						<li><a href="/classroom_rental/views/admin/notice_mng.jsp">공지사항 등록</a></li>
-						<li><a href="/classroom_rental/views/board/board_list.jsp">게시판</a></li>
+						<li><a href="/classroom_rental/boardList.do">게시판</a></li>
 						<li><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
@@ -42,7 +42,7 @@
 								} else {
 						%>
 						<li><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
-						<li><a href="/classroom_rental/views/board/board_list.jsp">게시판</a></li>
+						<li><a href="/classroom_rental/boardList.do">게시판</a></li>
 						<li><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
@@ -51,7 +51,7 @@
 							/* 세션이 없을 경우 */
 							} else {
 						%>
-						<li><a href="/classroom_rental/views/board/board_list.jsp">게시판</a></li>
+						<li><a href="/classroom_rental/boardList.do">게시판</a></li>
 						<li><a href="/classroom_rental/views/main/login.jsp">로그인</a></li>
 						<li><a href="/classroom_rental/views/main/join.jsp">회원가입</a></li>
 						<%
@@ -73,7 +73,7 @@
 					<div class="col-md-4">
 						<h2>게시판</h2>
 						<p class="text-justify">강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청요</p>
-						<p><a class="btn" style="background-color:#fcf8e3;" href="/classroom_rental/views/board/board_list.jsp" role="button">게시판 가기 »</a></p>
+						<p><a class="btn" style="background-color:#fcf8e3;" href="/classroom_rental/boardList.do" role="button">게시판 가기 »</a></p>
 					</div>
 					<div class="col-md-4">
 						<h2>사이트 문의</h2>

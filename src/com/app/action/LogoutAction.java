@@ -9,7 +9,7 @@ public class LogoutAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		//技记 昏力
+		// 技记 昏力
 		request.getSession().invalidate();
 		return "/";
 	}

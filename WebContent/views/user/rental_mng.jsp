@@ -38,7 +38,7 @@
 						<li><a href="/classroom_rental/adminRentalMng.do">강의실 대여 관리</a></li>
 						<li><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
 						<li><a href="/classroom_rental/views/admin/notice_mng.jsp">공지사항 등록</a></li>
-						<li><a href="/classroom_rental/views/board/board_list.jsp">게시판</a></li>
+						<li><a href="/classroom_rental/boardList.do">게시판</a></li>
 						<li class="active"><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
@@ -47,7 +47,7 @@
 								} else {
 						%>
 						<li><a href="/classroom_rental/classroomRentalList.do">강의실 대여</a></li>
-						<li><a href="/classroom_rental/views/board/board_list.jsp">게시판</a></li>
+						<li><a href="/classroom_rental/boardList.do">게시판</a></li>
 						<li class="active"><a href="/classroom_rental/userRentalMng.do">나의 신청현황</a></li>
 						<li><a href="/classroom_rental/logout.do">로그아웃</a></li>
 						<li style="float: right;"><a href="#"><%=session.getAttribute("name")%>님 환영합니다.</a></li>
@@ -67,7 +67,7 @@
 				<!-- 구분선 삽입 -->
 				<hr/>
 				<!-- 강의실 대여 신청서 리스트 -->
-				<div id="rentalList" style="height: 700px; overflow: auto">
+				<div id="rentalList" style="height:overflow: auto">
 					<table id="rentalListContent" class="table">
 						<tr style="color:black; background-color:#fcf8e3;">
 							<th>번호</th>
@@ -178,15 +178,24 @@
 			</div>
 		</div>
 	</div>
+	<footer>
+		<div class="container">
+			<p>
+				<span>Copyright © 2016 | <a href="https://www.bible.ac.kr">bible.ac.kr</a></span>
+				<span style="float: right;"><a href="https://www.bible.ac.kr">+사이트
+						맵</a></span>
+			</p>
+		</div>
+	</footer>
 	
 	<script>
 		$(document).ready(function() {
 			if ("${result}"=="true") {
 				alert("강의실 사용 신청서 취소에 성공하였습니다.");
-				location.href = 'http://localhost:8080/classroom_rental/userRentalMng.do';
+				location.href = '/classroom_rental/userRentalMng.do';
 			} else if ("${result}"=="false") {
 				alert("유효하지 않은 요청입니다. 확인 후 다시 시도해주시기 바랍니다.");
-				location.href = 'http://localhost:8080/classroom_rental/userRentalMng.do';
+				location.href = '/classroom_rental/userRentalMng.do';
 			} else { } 
 		});
 		
