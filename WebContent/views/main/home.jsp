@@ -67,17 +67,17 @@
 				<div class="row">
 					<div class="col-md-4">
 						<h2>강의실 대여</h2>
-						<p class="text-justify">강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청요</p>
+						<p class="text-justify">한국성서대학교 캠퍼스 내의 빈 강의실을 무료로 대여해줍니다. 교내 학생이라면 비용의 제한없이 무료로 대여 신청이 가능합니다. 간단한 신청서를 제출해주시면 해당 관리자가 확인 후 승인이 이루어지면 대여가 완료됩니다.</p>
 						<p><a class="btn" style="background-color:#fcf8e3;" href="/classroom_rental/classroomRentalList.do" role="button">강의실 대여하러 가기 »</a></p>
 					</div>
 					<div class="col-md-4">
 						<h2>게시판</h2>
-						<p class="text-justify">강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청요</p>
+						<p class="text-justify">강의실 예약 서비스의 공개 게시판 입니다. 회원 비회원 모두 게시글을 열람하실 수 있으나 게시글 작성 및 댓글 서비스는 회원에 한해 가능합니다. 해당 서비스와 관련하여 다양한 의견, 문의, 자유글 등을 기재하실 수 있습니다.</p>
 						<p><a class="btn" style="background-color:#fcf8e3;" href="/classroom_rental/boardList.do" role="button">게시판 가기 »</a></p>
 					</div>
 					<div class="col-md-4">
 						<h2>사이트 문의</h2>
-						<p class="text-justify">강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청서를 작성해야되요 강의실을 대여해줍니다 것도 무료로 학생이면 가능합니다 하하하 간단한 신청요</p>
+						<p class="text-justify">해당 서비스는 아직 구현이 완료되지 않아 준비중 입니다. 관련 문의사항이나 개발에 관한 의견이 있으신 분은 컴퓨터소프트웨어학과 3학년에 재학 중인 김원정 학생을 찾아 문의 해주면 정말 감사하겠습니다.</p>
 						<p><a class="btn" style="background-color:#fcf8e3;" href="#" role="button">문의하러 가기 »</a></p>
 					</div>
 				</div>
@@ -95,22 +95,22 @@
 										<!-- Carousel items -->
 										<div class="carousel-inner">
 											<div class="active item" data-slide-number="0">
-												<img src="/classroom_rental/resources/images/room1.jpg">
+												<img src="/classroom_rental/resources/images/carousel_img/room1.jpg">
 											</div>
 											<div class="item" data-slide-number="1">
-												<img src="/classroom_rental/resources/images/room2.jpg">
+												<img src="/classroom_rental/resources/images/carousel_img/room2.jpg">
 											</div>
 											<div class="item" data-slide-number="2">
-												<img src="/classroom_rental/resources/images/room3.jpg">
+												<img src="/classroom_rental/resources/images/carousel_img/room3.jpg">
+											</div>
+											<div class="item" data-slide-number="3">
+												<img src="/classroom_rental/resources/images/carousel_img/room4.jpg">
 											</div>
 											<div class="item" data-slide-number="4">
-												<img src="/classroom_rental/resources/images/room4.jpg">
+												<img src="/classroom_rental/resources/images/carousel_img/room5.jpg">
 											</div>
 											<div class="item" data-slide-number="5">
-												<img src="/classroom_rental/resources/images/room5.jpg">
-											</div>
-											<div class="item" data-slide-number="6">
-												<img src="/classroom_rental/resources/images/room6.jpg">
+												<img src="/classroom_rental/resources/images/carousel_img/room6.jpg">
 											</div>
 										</div>
 										<!-- Carousel nav -->
@@ -134,44 +134,46 @@
 										<p>» 현수막 길이 : 800 cm</p>
 										<p>» 용도 : 공연, 세미나, 결혼식</p>
 										<p class="sub-text">
-											<a href="#">» 대여하러 가기</a>
+											<a href="/classroom_rental/classroomRentalList.do">» 대여하러 가기</a>
 										</p>
 									</div>
 
 									<div id="slide-content-1">
-										<h2>Slider Two</h2>
-										<p>Lorem Ipsum Dolor</p>
+										<h2>정보 2실</h2>
+										<p>» 컴퓨터소프트웨어학과 3학년 과실</p>
+										<p>» 컴퓨터소프트웨어학과 3학년 학생들만 신청 가능</p>
 										<p class="sub-text">
-											October 24 2014 - <a href="#">Read more</a>
+											<a href="/classroom_rental/classroomRentalList.do">» 대여하러 가기</a>
 										</p>
 									</div>
 
 									<div id="slide-content-2">
-										<h2>Slider Three</h2>
-										<p>Lorem Ipsum Dolor</p>
+										<h2>갈멜관 305호</h2>
+										<p>» 이용가능 설비 : 빔프로젝터, 피아노</p>
 										<p class="sub-text">
-											October 24 2014 - <a href="#">Read more</a>
+											<a href="/classroom_rental/classroomRentalList.do">» 대여하러 가기</a>
 										</p>
 									</div>
 									<div id="slide-content-3">
-										<h2>Slider Three</h2>
-										<p>Lorem Ipsum Dolor</p>
+										<h2>모리아관 303호</h2>
+										<p>» 이용가능 설비 : 빔프로젝터</p>
 										<p class="sub-text">
-											October 24 2014 - <a href="#">Read more</a>
+											<a href="/classroom_rental/classroomRentalList.do">» 대여하러 가기</a>
 										</p>
 									</div>
 									<div id="slide-content-4">
-										<h2>Slider Three</h2>
-										<p>Lorem Ipsum Dolor</p>
+										<h2>천마홀</h2>
+										<p>밀알관 지하 1층</p>
+										<p>» 이용가능 설비 : 빔프로젝터</p>
 										<p class="sub-text">
-											October 24 2014 - <a href="#">Read more</a>
+											<a href="/classroom_rental/classroomRentalList.do">» 대여하러 가기</a>
 										</p>
 									</div>
 									<div id="slide-content-5">
-										<h2>Slider Three</h2>
-										<p>Lorem Ipsum Dolor</p>
+										<h2>복음관 301호</h2>
+										<p>» 이용가능 설비 : 빔프로젝터</p>
 										<p class="sub-text">
-											October 24 2014 - <a href="#">Read more</a>
+											<a href="/classroom_rental/classroomRentalList.do">» 대여하러 가기</a>
 										</p>
 									</div>
 								</div>
@@ -185,22 +187,22 @@
 						<ul class="hide-bullets">
 							<li class="col-sm-2"><a class="thumbnail"
 								id="carousel-selector-0"><img
-									src="/classroom_rental/resources/images/room1.jpg"></a></li>
+									src="/classroom_rental/resources/images/carousel_img/room1.jpg"></a></li>
 							<li class="col-sm-2"><a class="thumbnail"
 								id="carousel-selector-1"><img
-									src="/classroom_rental/resources/images/room2.jpg"></a></li>
+									src="/classroom_rental/resources/images/carousel_img/room2.jpg"></a></li>
 							<li class="col-sm-2"><a class="thumbnail"
 								id="carousel-selector-2"><img
-									src="/classroom_rental/resources/images/room3.jpg"></a></li>
+									src="/classroom_rental/resources/images/carousel_img/room3.jpg"></a></li>
 							<li class="col-sm-2"><a class="thumbnail"
 								id="carousel-selector-3"><img
-									src="/classroom_rental/resources/images/room4.jpg"></a></li>
+									src="/classroom_rental/resources/images/carousel_img/room4.jpg"></a></li>
 							<li class="col-sm-2"><a class="thumbnail"
 								id="carousel-selector-4"><img
-									src="/classroom_rental/resources/images/room5.jpg"></a></li>
+									src="/classroom_rental/resources/images/carousel_img/room5.jpg"></a></li>
 							<li class="col-sm-2"><a class="thumbnail"
 								id="carousel-selector-5"><img
-									src="/classroom_rental/resources/images/room6.jpg"></a></li>
+									src="/classroom_rental/resources/images/carousel_img/room6.jpg"></a></li>
 						</ul>
 					</div>
 				</div>
@@ -211,8 +213,7 @@
 		<div class="container">
 			<p>
 				<span>Copyright © 2016 | <a href="https://www.bible.ac.kr">bible.ac.kr</a></span>
-				<span style="float: right;"><a href="https://www.bible.ac.kr">+사이트
-						맵</a></span>
+				<span style="float: right;"><a href="/classroom_rental/views/main/site_map.jsp">+사이트 맵</a></span>
 			</p>
 		</div>
 	</footer>

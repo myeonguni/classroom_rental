@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.app.beans.board;
+import com.app.beans.boardComment;
 import com.app.beans.timetable;
 import com.app.beans.user;
 
@@ -19,7 +20,7 @@ public class boardDao extends CommonDao {
 	public ArrayList<board> getBoardList() throws SQLException {
 		ResultSet rs = null;
 		ArrayList<board> result = new ArrayList<board>();
-		String sql = "SELECT * FROM BOARD";
+		String sql = "SELECT * FROM BOARD ORDER BY TO_NUMBER(BOARD_ID) DESC";
 		rs = openConnection().executeQuery(sql);
 		while (rs.next()) {
 			board bb = new board();
@@ -74,27 +75,62 @@ public class boardDao extends CommonDao {
 			result.setBoard_file(rs.getString("BOARD_FILE"));
 			result.setDate(rs.getString("BOARD_DATE"));
 		}
-		/* 게시글 댓글 읽어오기 INNER JOIN 사용 */
-		//sql = "SELECT RECOMMENT.CM_ID, RECOMMENT.CM_NAME, RECOMMENT.CM_TEXT FROM BOARD INNER JOIN RECOMMENT ON BOARD.BOARD_ID = RECOMMENT.BOARD_ID WHERE BOARD.BOARD_ID = '" + postIndex + "'";
 		
 		closeConnection();
 		return result;
 	}
 
-	
-	
 	/* 게시글 삭제 */
-	public boolean getDeletePost(String postIndex) throws SQLException {
+	public String getDeletePost(String postIndex) throws SQLException {
 		ResultSet rs = null;
-		boolean result = false;
+		String result = "";
 		String sql = "DELETE FROM BOARD WHERE BOARD_ID ='" + postIndex + "'";
 
 		try {
 			rs = openConnection().executeQuery(sql);
-			result = rs.next(); // 게시글 추가시 ture
+			result = "DeleteTrue"; // 게시글 삭제 시 ture
 		} catch (SQLException e) {
 			System.err.println(e);
-			result = false; // 게시글 추가 실패시 false
+			result = "DeleteFalse"; // 게시글 삭제 실패시 false
+		} finally {
+			closeConnection();
+		}
+		
+		return result;
+	}
+
+	/* 댓글 리스트 조회 */
+	public ArrayList<boardComment> getBoardCommentList(String boardIndex) throws SQLException {
+		ResultSet rs = null;
+		ArrayList<boardComment> result = new ArrayList<boardComment>();
+		String sql = "SELECT * FROM BCOMMENT WHERE BCOMMENT_BOARDID ='"+boardIndex+"' ORDER BY TO_NUMBER(BCOMMENT_INDEX) DESC";
+		rs = openConnection().executeQuery(sql);
+		while (rs.next()) {
+			boardComment bc = new boardComment();
+			bc.setBoardid(rs.getString("BCOMMENT_BOARDID"));
+			bc.setBody(rs.getString("BCOMMENT_BODY"));
+			bc.setDate(rs.getString("BCOMMENT_DATE"));
+			bc.setId(rs.getString("BCOMMENT_ID"));
+			bc.setName(rs.getString("BCOMMENT_NAME"));
+			result.add(bc);
+		}
+		closeConnection();
+		return result;
+	}
+	
+	/* 댓글 작성 */
+	public String getBoardPostComment(boardComment Comment) {
+		ResultSet rs = null;
+		String result = "";
+		String sql = "INSERT INTO BCOMMENT VALUES(BCOMMENT_ID_SEQ.NEXTVAL,'" + Comment.getId() + "','" + Comment.getName()
+				+ "','" + Comment.getBody() + "','" + Comment.getDate() + "','" + Comment.getBoardid() + "')";
+
+		try {
+			rs = openConnection().executeQuery(sql);
+			result = "CommentTrue"; // 댓글 추가시 ture
+		} catch (SQLException e) {
+			System.err.println(e);
+			result = "CommentFalse"; // 댓글 추가 실패시 false
 		} finally {
 			closeConnection();
 		}

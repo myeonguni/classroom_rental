@@ -53,12 +53,12 @@
 								<input id="password" name="password" type="password" placeholder=" ********" class="form-control">
 							</p>
 							<p>
-								<select class="form-control" id="department">
-									<option>컴퓨터소프트웨어학과</option>
-									<option>영유아보육학과</option>
-									<option>성서학과</option>
-									<option>사회복지학과</option>
-									<option>간호학과</option>
+								<select class="form-control" id="department" name="department">
+									<option value="컴퓨터소프트웨어학과" selected>컴퓨터소프트웨어학과</option>
+									<option value="영유아보육학과">영유아보육학과</option>
+									<option value="성서학과">성서학과</option>
+									<option value="사회복지과">사회복지학과</option>
+									<option value="간호학과">간호학과</option>
 								</select>
 							</p>
 							<p>
@@ -80,7 +80,7 @@
 		<div class="container">
 			<p>
 				<span>Copyright © 2016 | <a href="https://www.bible.ac.kr">bible.ac.kr</a></span>
-				<span style="float: right;"><a href="https://www.bible.ac.kr">+사이트 맵</a></span>
+				<span style="float: right;"><a href="/classroom_rental/views/main/site_map.jsp">+사이트 맵</a></span>
 			</p>
 		</div>
 	</footer>

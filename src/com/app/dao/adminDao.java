@@ -18,7 +18,7 @@ public class adminDao extends CommonDao {
 	public ArrayList<reservation> getRentalReportList() throws SQLException {
 		ResultSet rs = null;
 		ArrayList<reservation> result = new ArrayList<reservation>();
-		String sql = "SELECT * FROM RESERVATION";
+		String sql = "SELECT * FROM RESERVATION ORDER BY TO_NUMBER(RES_ID) DESC";
 		rs = openConnection().executeQuery(sql);
 		int count=1;
 		while (rs.next()) {

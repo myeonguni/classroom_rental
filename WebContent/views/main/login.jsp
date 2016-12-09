@@ -58,11 +58,6 @@
 								<button onclick="formCheck()" class="btn btn-lg btn-warning btn-block">Login</button>
 							</p>
 							<p class="text-right">
-								<a href="/auth/facebook">페이스북</a>&nbsp;|&nbsp;<a href="/auth/twitter">트위터</a>&nbsp;|&nbsp;
-								<a href="/auth/google">구글</a>&nbsp;|&nbsp;
-								<a href="/auth/github">깃허브</a>
-							</p>
-							<p class="text-right">
 								아직 회원이 아니신가요? |&nbsp;<a href="/classroom_rental/views/main/join.jsp">회원가입</a>
 							</p>
 					</div>
@@ -74,7 +69,7 @@
 		<div class="container">
 			<p>
 				<span>Copyright © 2016 | <a href="https://www.bible.ac.kr">bible.ac.kr</a></span>
-				<span style="float: right;"><a href="https://www.bible.ac.kr">+사이트 맵</a></span>
+				<span style="float: right;"><a href="/classroom_rental/views/main/site_map.jsp">+사이트 맵</a></span>
 			</p>
 		</div>
 	</footer>

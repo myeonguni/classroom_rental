@@ -11,7 +11,7 @@ public class BoardPostDeleteAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		boolean result;
+		String result = "";
 
 		request.setCharacterEncoding("utf-8");
 		String postIndex = request.getParameter("postIndex");

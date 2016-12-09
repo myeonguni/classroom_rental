@@ -9,7 +9,7 @@ public class board {
 	private String board_bodyType;
 	private String board_file;
 	private String date;
-
+	
 	public String getBoard_index() {
 		return board_index;
 	}

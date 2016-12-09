@@ -78,7 +78,7 @@
 							<th class="text-center">글쓴이</th>
 							<th class="text-center">날짜</th>
 						</tr>
-							<!-- 게시물이 존재할 경우 -->
+						<!-- 게시물이 존재할 경우 -->
 						<c:choose>
 						    <c:when test="${fn:length(boardList) > 0}">
 						    	<c:forEach items="${boardList}" var="board" varStatus="status">
@@ -86,7 +86,7 @@
 						    			<!-- 글번호 -->
 						    			<td class="text-center">${status.count}</td>
 						    			<!-- 글제목 -->
-										<td><a href="/classroom_rental/views/board/board_read.jsp?board_index=${board.board_index}&board_title=${board.board_title}&board_body=${board.board_body}&user_name=${board.user_name}&user_id=${board.user_id}">${board.board_title}</a></td>
+										<td><a href="/classroom_rental/boardPostRead.do?board_index=${board.board_index}">${board.board_title}</a></td>
 						    			<!-- 글쓴이 -->
 						    			<td class="text-center">${board.user_name}</td>
 						    			<!-- 날짜 -->
@@ -117,8 +117,7 @@
 		<div class="container">
 			<p>
 				<span>Copyright © 2016 | <a href="https://www.bible.ac.kr">bible.ac.kr</a></span>
-				<span style="float: right;"><a href="https://www.bible.ac.kr">+사이트
-						맵</a></span>
+				<span style="float: right;"><a href="/classroom_rental/views/main/site_map.jsp">+사이트 맵</a></span>
 			</p>
 		</div>
 	</footer>

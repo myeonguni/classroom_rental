@@ -69,7 +69,7 @@
 				<hr/>
 				<div id="boardPost" style="">
 				<!-- 강의실 예약 신청서 양식 -->
-					<form id="boardPostForm" action="/classroom_rental/boardPostForm.do" method="POST">
+					<form id="boardPostForm" action="/classroom_rental/boardPostForm.do" enctype="multipart/form-data" method="POST">
 						<!-- 게시글 내용 -->
 						<div class="form-group row">
 							<label for="inputTitle" class="col-sm-2 col-form-label">제목</label>
@@ -121,8 +121,7 @@
 		<div class="container">
 			<p>
 				<span>Copyright © 2016 | <a href="https://www.bible.ac.kr">bible.ac.kr</a></span>
-				<span style="float: right;"><a href="https://www.bible.ac.kr">+사이트
-						맵</a></span>
+				<span style="float: right;"><a href="/classroom_rental/views/main/site_map.jsp">+사이트 맵</a></span>
 			</p>
 		</div>
 	</footer>

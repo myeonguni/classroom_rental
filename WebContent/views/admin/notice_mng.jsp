@@ -56,7 +56,7 @@
 				<hr/>
 				<br><br><br><br><br><br><br>
 				<div class="text-center">
-					<img src="/classroom_rental/resources/images/wait.gif">
+					<img src="/classroom_rental/resources/images/wait.jpg" width="700px">
 				</div>
 			</div>
 		</div>
@@ -65,8 +65,7 @@
 		<div class="container">
 			<p>
 				<span>Copyright © 2016 | <a href="https://www.bible.ac.kr">bible.ac.kr</a></span>
-				<span style="float: right;"><a href="https://www.bible.ac.kr">+사이트
-						맵</a></span>
+				<span style="float: right;"><a href="/classroom_rental/views/main/site_map.jsp">+사이트 맵</a></span>
 			</p>
 		</div>
 	</footer>

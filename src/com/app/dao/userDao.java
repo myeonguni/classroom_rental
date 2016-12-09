@@ -57,7 +57,7 @@ public class userDao extends CommonDao {
 	public ArrayList<reservation> getRentalReportList(String id) throws SQLException {
 		ResultSet rs = null;
 		ArrayList<reservation> result = new ArrayList<reservation>();
-		String sql = "SELECT * FROM RESERVATION WHERE RES_USERID ='"+id+"'";
+		String sql = "SELECT * FROM RESERVATION WHERE RES_USERID ='"+id+"' ORDER BY TO_NUMBER(RES_ID) DESC";
 		rs = openConnection().executeQuery(sql);
 		int count=1;
 		while (rs.next()) {

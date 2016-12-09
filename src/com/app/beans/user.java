@@ -28,7 +28,7 @@ public class user {
 	public String getDepartment() {
 		return department;
 	}
-	public void setDepartment(String parameter) {
+	public void setDepartment(String department) {
 		this.department = department;
 	}
 	public String getTel() {
