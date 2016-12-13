@@ -96,12 +96,19 @@
 				</form>
 				<br><br><br>
 				<!-- 강의실 예약 현황 리스트 -->
-				<div style="float: right;">
-					<button type="button" class="btn btn-default" id="search_btn">${category1}, ${category2[0]}, ${category3[0].name}</button>
-					<button type="button" class="btn btn-default" onclick="rentalFormOpen()">
-						<span class="glyphicon glyphicon-edit"></span> 대여 신청하기
-					</button>
-				</div><br><br>
+				<div style="padding-bottom:7px;">
+					<ul class="nav nav-pills">
+						<li><button type="button" class="btn btn-circle btn-sm" style="background-color: #f2dede">대기</button></li>
+						<li><button type="button" class="btn btn-circle btn-sm" style="background-color: #d9edf7">승인</button></li>
+						<li><button type="button" class="btn btn-circle btn-sm" style="background-color: #fcf8e3">고정</button></li>
+						<li style="float: right;">
+							<button type="button" class="btn btn-default" onclick="rentalFormOpen()"><span class="glyphicon glyphicon-edit"></span> 대여 신청하기</button>
+						</li>
+						<li style="float: right;">
+							<button type="button" class="btn btn-default" id="search_btn">${category1}, ${category2[0]}, ${category3[0].name}</button>&nbsp;&nbsp;
+						</li>
+					</ul>
+				</div>
 				<div id="timetable">
 					<table class="table table-bordered" style="table-layout:fixed;">
 						<tr style="background-color: #f0ad4e;">

@@ -103,7 +103,7 @@ public class boardDao extends CommonDao {
 	public ArrayList<boardComment> getBoardCommentList(String boardIndex) throws SQLException {
 		ResultSet rs = null;
 		ArrayList<boardComment> result = new ArrayList<boardComment>();
-		String sql = "SELECT * FROM BCOMMENT WHERE BCOMMENT_BOARDID ='"+boardIndex+"' ORDER BY TO_NUMBER(BCOMMENT_INDEX) DESC";
+		String sql = "SELECT * FROM BCOMMENT WHERE BCOMMENT_BOARDID ='"+boardIndex+"' ORDER BY TO_NUMBER(BCOMMENT_INDEX) ASC";
 		rs = openConnection().executeQuery(sql);
 		while (rs.next()) {
 			boardComment bc = new boardComment();
